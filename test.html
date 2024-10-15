@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>coined</title>
+</head>
+<body>
+    <nav class="w-full fixed top-0 hover:bg-white"> 
+        <div class="container mx-auto py-5 flex items-center justify-around">
+       
+           <a href="/" class="flex items-center gap-2 cursor-pointer">
+           <span class="font-nunito text-gray-900 text-lg font-semibold uppercase">coined</span></a>
+           
+   
+           <ul class="hidden md:flex space-x-10 text-gray-700 font-semibold text-sm uppercase">
+               <li class="hover:text-gray-900"><a href="#dashboard">About</a></li>
+               <li class="hover:text-gray-900"><a href="#tips">Tips</a></li> <!--create a new page with articles (AI generated) -> load from an external data.js file mock-up for fadenfroh-->
+               <li class="hover:text-gray-900"><a href="#dashboard">Savings</a></li>
+            </ul>
+           
+           <div class="hidden md:block items-center gap-2">
+           <a href="./login.html" class="pointer hover:text-gray-900"><img src="./assets/acount.svg" style="width:15px; height:15px; display:inline-block;"/>Log-In</a></li>
+           </div>
+   
+           <div id="hamburger" class="md:hidden space-y-1 cursor-pointer z-20">
+               <div class="w-6 h-0.5 bg-black"></div>
+               <div class="w-6 h-0.5 bg-black"></div>
+               <div class="w-6 h-0.5 bg-black"></div>
+           </div>
+   
+           <ul id="menu" class="hidden bg-white items-center absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-center">
+               <li id="close" class="hidden cursor-pointer"><img src="./assets/x-symbol-svgrepo-com.svg" class="w-4"></li>
+               <!-- <li><a href="#verlauf">About</a></li>
+               <li><a href="#goals">Tipps</a></li> -->
+               <li><a href="#login">Log-In</a></li>
+           </ul>
+       </div>
+       </nav>
+   
+    <section class="flex items-center justify-center" style="background-image: url('./assets/bckg-img.png'); height: 100vh; background-size: cover; background-position: center;">
+        <article class="p-10 grid grid-cols-2 gap-10 w-full">
+            
+            <!-- Left Side: Welcome Message & New Entry-->
+            <div id="welcome" class="container flex flex-col items-start justify-start gap-5 my-5 py-5 p-16">
+            
+                <h1 class="heading_line py-5 p-10 font-nunito">
+                    Ready <br>to save 
+                    <br/>some 
+                   <span class="span_el">money</span>?
+                </h1>
+        </div>
+               
+        <div class="flex items-center justify-center">
+            <a href="/" tabIndex="0"><img class="bn46" style=" width: 170px; height: 50px;" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+            <a href="/" tabIndex="0"><img class="bn45" style=" width: 170px; height: 50px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45"/></a>
+        </div>
+      </article>      
+    </section>  
+    <script src="./app.js"></script>   
+</body>
+</html>

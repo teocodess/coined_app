@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <title>coined</title>
+</head>
+<body class="font-nunito">
+
+    <nav class="w-full fixed top-0 hover:bg-white"> 
+     <div style="margin-left: 20%;" class="container mx-auto py-5 flex items-center justify-start">
+        <!-- <div>
+            <img src="" alt="logo">
+        </div> -->
+        <div class="flex items-center gap-2 cursor-pointer">
+        <div id="hamburger" class=" space-y-1 cursor-pointer z-20">
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+        </div>
+        <a href="/"><span class="font-nunito text-gray-900 text-lg font-semibold uppercase">coined</span></a>
+        </div>
+            <!-- <a class="hover:text-gray-900 self-end"><a href="./test.html"><span  class="font-nunito text-gray-900 text-lg uppercase">Log-Out</span></a> -->
+        
+
+        <ul id="menu" style="height: 100vh; width: 30%; z-index: 102;" class="hidden bg-white items-center absolute left-0 top-0 p-10 space-y-10 text-center">
+            <li id="close" class="hidden cursor-pointer"><img src="./assets/x-symbol-svgrepo-com.svg" class="w-4"></li>
+            <!-- <li><a href="#dashboard">Ersparnisse</a></li> -->
+            <li><a href="#" id="goals-link">Goals</a></li>
+            <!-- <li><a href="./tips.html">Tips</a></li> -->
+            <!-- <li class="hover:text-gray-900 self-end"><a href="./test.html">Log-Out</a></li> -->
+          
+        </ul>
+    </div>
+    </nav>
+
+ 
+   
+        
+    <section id="goals-section" class="hidden over no-scrollbar" style="width: 40%; height: 100vh; background-color: white; position: fixed; top: 0; left: 0; z-index: 100;">
+        
+        <div class="flex flex-col p-10 justify-center items-center gap-10">
+            <div class="flex justify-start items-center gap-10">
+            <img src="./assets/left-arrow-svgrepo-com.svg" id="close_btn" class="hidden cursor-pointer w-6">
+            <h1 class="text-xl font-bold mb-4">Goals</h1>
+        </div>
+            <form action="" id="category_form" class="flex flex-col items-start justify-center gap-2">
+               <div class="my-2 w-full h-auto flex flex-col items-start justify-center gap-2" >
+           <label for="category_name">Name:</label><input type="text" class="border-2 rounded-lg w-full" style="padding:5px;" id="category_name">
+           <label for="category_amount">Summe:</label><input type="number" class="border-2 rounded-lg w-full" style="padding:5px;" id="category_amount">
+           <button id="category_add_btn" style="background-color: #FFC52F; color: #fff; padding: 10px; border: none; border-radius: 5px; width:100%;">ADD</button>
+               </div>
+       
+           <div id="category_output" class="flex flex-col items-center border-2 gap-10 p-5"></div> 
+        </form>
+        </div> 
+    </section>
+
+<section id="hero-section" class="over no-scrollbar"  style="min-height: calc(100vh - 80px); height: 100vh; padding-top: 50px; background-image: url('./assets/bckg-img.png'); background-size: cover; background-position: center;" >
+    <div id="dashboard_container" style="height:100vh" class="flex flex-row items-center justify-center">
+    
+         <div style="z-index: 1" class="grid grid-cols-2 text-center relative p-10">
+
+            <div class="col-span-1 flex flex-col items-end justify-center">
+            <span style="font-family: 'Georgia', serif; background-color: white; font-size: 3rem; font-weight: 700; text-align: end;">  
+            <!-- Welcome back, <span id="add_username"></span>! -->Willkommen zurück!
+            </span>
+        </div>
+            
+        <img src="./assets/New svg.svg" style="position: absolute; left: 39.5%; bottom: 30%; width: 400px; height: 100%;"> 
+            <div style="border-left: 2px solid white;" class="col-span-1 flex flex-col items-center justify-center p-5">
+                <div id="piggy" style=" z-index: 101;" class=" text-center rounded-lg flex flex-col items-center justify-end">  
+            <p style="border:2px solid white; margin-bottom: 10px;" class="py-5 p-5 rounded-lg bg-white shadow-lg text-center">Saldo: <br>
+                <span id="balance" class="text-xl font-bold">?</span>
+            </p>
+        </div>
+        <!-- Filter Section: Incoming and Outgoing -->
+        <div id="Filter" style="z-index: 101;" class="flex gap-4">
+            <!-- Incoming -->
+            <div class="only bg-green-300 rounded-lg py-5 p-5 shadow-lg text-center">
+                <p>Eingänge: 
+                    <span id="onlyIncoming" class="font-semibold text-lg">?</span>
+                </p>
+            </div>
+            <!-- Outgoing -->
+            <div class="only bg-red-300 rounded-lg py-5 p-5 shadow-lg text-center"> 
+                <p>Ausgänge: 
+                    <span id="onlyOutcoming" class="font-semibold text-lg">?</span>
+                </p>
+            </div>  
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    
+<section style="display: flex; flex-direction: row; background-color: #9DCAAE; justify-content: center; align-items: center; padding: 15px; ">
+ <!-- New Entry Form -->
+ <section style="padding: 20px; display: flex; justify-content: center; margin-top: 40px;">
+    <div id="neuer_Eintrag" style="width: 100%; max-width: 600px; background-color: rgba(255,255,255,0.8); padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <form id="bankForm" style="display: flex; flex-direction: column; gap: 10px;" class="p-10">
+            <h1 style="font-family: 'Georgia', serif; font-size: 2rem; font-weight: 700; text-align: center;">Neuer Eintrag: </h1>
+            <select name="category" id="category_dropdown" style="padding: 10px; border-radius: 5px;">
+                <option value="house">#house</option>
+                <option value="crochet">#crochet</option>
+                <option value="travel">#travel</option>
+                <option value="books">#books</option>
+            </select>
+            <input type="text" id="textIn" placeholder="Beschreibung" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <input type="number" id="numberIn" placeholder="Betrag" step="0.01" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <label for="check" style="display: flex; align-items: center; gap: 10px;">
+                <input name="check" type="checkbox" id="isCheck"> ist Eingang
+            </label>
+            <input type="date" id="dateIn" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <button id="myBtn" style="background-color: #FFC52F; color: #fff; padding: 10px; border: none; border-radius: 5px;">Eintrag schicken</button>
+        </form>
+    </div>
+</section>
+    
+    
+    <!--Ein- & Ausgaben Verlauf container-->
+   
+    
+        <div id="verlauf"  class="container bg-white/30 backdrop-blur-md rounded-xl border border-white/20 shadow-lg p-10 flex flex-col gap-5">
+            <h1 style="font-family: 'Georgia', serif; font-size: 2rem; font-weight: 700; text-align: center;" class="text-xl uppercase semibold text-center my-3">Ein- & Ausgaben Verlauf</h1>
+            <div>
+                <span style="font-weight: bold;">Filter:</span>
+                <label for="nurEingängeCheck" style="margin-left: 10px;">nur Eingänge:</label>
+                <input name="nurEingänge" id="nurEingängeCheck" type="checkbox">
+                <label for="nurAusgängeCheck" style="margin-left: 10px;">nur Ausgänge:</label>
+                <input name="nurAusgänge" id="nurAusgängeCheck" type="checkbox">
+        
+            
+                <select id="filterKategorie" style="padding: 10px; border-radius: 5px;">
+                    <option>Kategorie:</option>
+                </select>
+                <label for="filterÄlteste" style="margin-left: 10px;">älteste zuerst:</label>
+                <input name="filterÄlteste" id="filterÄlteste" type="checkbox">
+                <label for="filterNeueste" style="margin-left: 10px;">neueste zuerst:</label>
+                <input name="filterNeueste" id="filterNeueste" type="checkbox">
+            </div>
+        
+        <div class="container flex w-full h-auto flex-row items-center justify-center">
+        <div id="output" class="w-full h-auto">
+
+        </div>
+</div>
+    </div>
+  
+ </section>
+</section>
+    
+    <!--Footer BORDER NOT WORKING WHY?-->
+   
+    <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>&#169All Rights Reserved. 2024.</p>
+    </footer>
+
+      <script src="./app.js"></script>
+</body>
+</html>

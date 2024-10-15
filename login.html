@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Log-In Page</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body class="flex items-center justify-center" style="background-image: url('./assets/bckg-img.png'); height: 100vh; background-size: cover; background-position: center;">
+    <div class="bg-white/30 backdrop-blur-md rounded-lg border border-white/20 shadow-lg p-10 relative max-w-[430px] w-full bg-[#fff]">
+    
+        <div class="form login p-[30px]">
+            <span class="title relative text-[27px] font-medium">Log-In</span>
+            <form action="#">
+                <!-- Email input -->
+                <div class="input-field relative h-[50px] w-full mt-[30px]">
+                    <input type="text" placeholder="Enter your email" 
+                    class="h-full w-full py-0 px-[35px] border rounded-lg outline-none hover:border-2 focus:border-2" required>
+                    <i class="uil uil-envelope absolute inset-y-1/4 left-4 translate-y-[-50%]"></i>
+                </div>
+
+                <!-- Password input -->
+                <div class="input-field relative h-[50px] w-full mt-[30px]">
+                    <input type="password" placeholder="Enter your password" 
+                    class="h-full w-full py-0 px-[35px] border rounded-lg outline-none hover:border-2 focus:border-2" required>
+                    <i class="uil uil-lock absolute inset-y-1/4 left-4 translate-y-[-50%]"></i>
+                </div>
+
+                <button class="text-3xl font-bold text-black  tracking-wider shadow-lg py-5 p-10 rounded-lg">
+                   <a href="./index.html">Log-In</a>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

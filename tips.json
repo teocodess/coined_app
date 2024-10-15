@@ -1,0 +1,40 @@
+{
+    "tips": [
+      {
+        "id": 1,
+        "title": "Create a Budget",
+        "content": "Track your income and expenses to make better financial decisions."
+      },
+      {
+        "id": 2,
+        "title": "Cook at Home",
+        "content": "Eating out is expensive. Save money by preparing meals at home."
+      },
+      {
+        "id": 3,
+        "title": "Automate Savings",
+        "content": "Set up automatic transfers to your savings account each month."
+      },
+      {
+        "id": 4,
+        "title": "Use Coupons",
+        "content": "Look for online or in-store coupons to save money on purchases."
+      },
+      {
+        "id": 5,
+        "title": "Reduce Energy Usage",
+        "content": "Lower your energy bills by turning off lights and appliances when not in use."
+      },
+      {
+        "id": 6,
+        "title": "Buy Generic Brands",
+        "content": "Generic brands offer the same quality as name brands at a lower cost."
+      },
+      {
+        "id": 7,
+        "title": "Avoid Impulse Buying",
+        "content": "Give yourself time to consider before making unplanned purchases."
+      }
+    ]
+  }
+  
